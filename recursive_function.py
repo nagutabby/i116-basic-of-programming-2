@@ -1,10 +1,10 @@
-def fact_recur(n: int) -> int:
+def recursive_factorial_loop(n: int) -> int:
     if n == 0:
         return 1
     else:
-        return n * fact_recur(n - 1)
+        return n * recursive_factorial_loop(n - 1)
 
-print(f'5! = {fact_recur(5)}')
-print(f'0! = {fact_recur(0)}')
-print(f'10! = {fact_recur(10)}')
-print(f'100! = {fact_recur(100)}')
+print(f'5! = {recursive_factorial_loop(5)}')
+print(f'0! = {recursive_factorial_loop(0)}')
+print(f'10! = {recursive_factorial_loop(10)}')
+print(f'100! = {recursive_factorial_loop(100)}')

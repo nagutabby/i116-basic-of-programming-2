@@ -1,6 +1,7 @@
-def sr_by_binary_search(v0: int) -> int:
+def square_root_by_binary_search(v0: int) -> int:
     v1: int = 0
     v2: int = v0
+    v3: int
     while v1 != v2:
         if (v2 - v1) % 2 == 0:
             v3 = v1 + (v2 - v1) // 2
@@ -13,5 +14,5 @@ def sr_by_binary_search(v0: int) -> int:
             v1 = v3
     return v1
 
-print(f'The square root of 200000000 is {sr_by_binary_search(200000000)}.')
-print(f'The square root of 20000000000000000 is {sr_by_binary_search(20000000000000000)}.')
+print(f'The square root of 200000000 is {square_root_by_binary_search(200000000)}.')
+print(f'The square root of 20000000000000000 is {square_root_by_binary_search(20000000000000000)}.')
