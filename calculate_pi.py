@@ -1,3 +1,5 @@
+import time
+
 def f(x: float) -> float:
     return (4 - x ** 2) ** (1 / 2)
 
@@ -31,10 +33,38 @@ def pi_with_trapezoido(e: float) -> float:
             v2 = v2 + g(i,n)
     return v2
 
+start: float = time.time()
 print(f'pi is {pi_with_rectangle(0.001)} where e is 0.001.')
-print(f'pi is {pi_with_rectangle(0.000001)} where e is 0.000001.')
-print(f'pi is {pi_with_rectangle(0.00000001)} where e is 0.00000001.')
+end: float = time.time()
+time_difference: float = end - start
+print(f'Time: {time_difference}')
 
+start = time.time()
+print(f'pi is {pi_with_rectangle(0.000001)} where e is 0.000001.')
+end = time.time()
+time_difference = end - start
+print(f'Time: {time_difference}')
+
+start = time.time()
+print(f'pi is {pi_with_rectangle(0.00000001)} where e is 0.00000001.')
+end = time.time()
+time_difference = end - start
+print(f'Time: {time_difference}')
+
+start = time.time()
 print(f'pi is {pi_with_trapezoido(0.001)} where e is 0.001.')
+end = time.time()
+time_difference = end - start
+print(f'Time: {time_difference}')
+
+start = time.time()
 print(f'pi is {pi_with_trapezoido(0.000001)} where e is 0.000001.')
+end = time.time()
+time_difference = end - start
+print(f'Time: {time_difference}')
+
+start = time.time()
 print(f'pi is {pi_with_trapezoido(0.00000001)} where e is 0.00000001.')
+end = time.time()
+time_difference = end - start
+print(f'Time: {time_difference}')
