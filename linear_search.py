@@ -1,4 +1,3 @@
-
 def square_root_by_linear_search(v0: int) -> int | None:
     for i in range(v0):
         if i * i > v0:
